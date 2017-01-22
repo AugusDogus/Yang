@@ -53,6 +53,13 @@ app.get('/', function(req, res) {
     });
 });
 
+app.get('/api', function(req, res) {
+    name = generateName();
+    res.json({
+        name: name
+    });
+})
+
 //Weird bug
 app.get('/admin', function(req, res) {
     res.redirect('/404');
